@@ -1,0 +1,53 @@
+body, html {
+    font-family: sans-serif;
+    padding: 5px;
+    height: 100%; /* Full height for the body and html for full vertical space */
+}
+h1, h2, h3 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: #c6ddf3;
+}
+.hboxmain {
+    display: flex;
+    height: 90vh; /* Set container height to fill the full viewport height */
+    flex-direction: row;
+    flex: 1;
+}
+.hbox {
+    display: flex;
+    flex-direction: row;
+}
+.vbox {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /*border: solid blue;*/
+}
+#editor {
+    flex: 1; /* Each item will grow and shrink equally with the same base width */
+    width: 100%;
+    display: flex; /* Enable flex for aligning content */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    box-sizing: border-box; /* Includes padding and border in width/height calculation */
+    min-height: 0;
+    min-width: 0;
+}
+.item {
+    flex: 1; /* Each item will grow and shrink equally with the same base width */
+    width: 100%;
+    display: flex; /* Enable flex for aligning content */
+    box-sizing: border-box; /* Includes padding and border in width/height calculation */
+    min-height: 0;
+    min-width: 0;
+}
+canvas {
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    box-sizing: border-box; /* Includes padding and border in width/height calculation */
+    min-height: 0;
+    min-width: 0;
+    /*border: solid green;*/
+}
