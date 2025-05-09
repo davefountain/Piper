@@ -38,7 +38,7 @@ h1, h2, h3 {
 .item {
     flex: 1; /* Each item will grow and shrink equally with the same base width */
     width: 100%;
-    display: flex; /* Enable flex for aligning content */
+    /*display: flex; !* Enable flex for aligning content *!*/
     box-sizing: border-box; /* Includes padding and border in width/height calculation */
     min-height: 0;
     min-width: 0;

@@ -21,6 +21,28 @@
 <body>
     <h1>Piper</h1>
     <div class="hboxmain">
+        <div class="item">
+            <p>
+            Piper is a thin layer over Javascript.
+            It removes brackets and uses significant whitespace to implement blocks.
+                <br>
+                <br>
+                Rules:
+            </p>
+            <ul>
+                <li>Blocks are identified by indenting with 4 spaces per level</li>
+                <li>No tabs allowed for indenting - only spcaes</li>
+                <li>The only place you can declare a variable is within a global or local block -
+                ideally at the beginning of the script, function or method</li>
+                <li>LET, CONST and VAR are not permitted</li>
+                <li>Omit the () brackets in FOR and IF statements</li>
+                <li>In a FOR statement Piper will add a LET for you after the (, so
+                    <br>for i = 0; i <= pointCount; i += 1
+                    <br>becomes
+                    <br>for (let  i = 0; i <= pointCount; i += 1) {
+                </li>
+            </ul>
+        </div>
         <div class="vbox">
             <div class="hbox">
                 <button class="item" onclick="load(example1)">Example 1</button>
