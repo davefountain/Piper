@@ -7,7 +7,8 @@ function runSketch(targetId) {
 
     // Remove old canvas...
     const canvasEl = document.getElementById("CAN");
-    canvasEl.remove();
+    if (canvasEl !== null)
+        canvasEl.remove();
 
     // Run the sketch
     eval(targetTextarea.value);
