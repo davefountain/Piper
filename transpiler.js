@@ -97,7 +97,6 @@ function handle(statement_type, statement_body, depth, context) {
         case "class":
         case "function":
         case "method":
-        case "if":
         case "constructor":
             context.level_stack.push("y");
             context.declaration_depth = -2;
@@ -108,7 +107,14 @@ function handle(statement_type, statement_body, depth, context) {
             context.level_stack.push("y");
             context.declaration_depth = -2;
             statement_body = "for (let " + statement_body.substring(3);
-            output = padding + statement_body + ") {";           // TODO: foreach formatting
+            output = padding + statement_body + ") {";
+            break;
+
+        case "if":
+            context.level_stack.push("y");
+            context.declaration_depth = -2;
+            statement_body = "if (" + statement_body.substring(2);
+            output = padding + statement_body + ") {";
             break;
 
         default:
